@@ -9,4 +9,4 @@ nmae = "angel";
 console(name);
 
 const PI = 3.1416;
-consolelog(PI);
+console.log(PI);
