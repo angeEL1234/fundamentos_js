@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .choice-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #fc0202;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .choice-btn:hover {
+            background-color: #00ff0d;
+        }
+
+        #didUser, #divMaq, #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #message {
+            margin-top: 30px;
+            background-color: #000000;
+            color: #0096fa;
+        }
+
+        .rounded {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .float-start {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .float-end {
+            float: right;
+            margin-left: 10px;
+        }
+
+        /* Limpiar floats */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Piedra, Papel o Tijera</h1>
+    
+    <!-- Botones para elegir -->
+    <button class="choice-btn" data-choice="piedra">🗿</button>
+    <button class="choice-btn" data-choice="papel">📄</button>
+    <button class="choice-btn" data-choice="tijera">✂️</button>
+
+    <!-- Resultado del Usuario -->
+    <div id="didUser" class="clearfix">
+        <!-- Imagen del Usuario (por defecto) -->
+        <img src="./img/descarga.png" class="rounded float-start" alt="Imagen Usuario">
+    </div>
+    
+    <!-- Resultado de la Máquina -->
+    <div id="divMaq" class="clearfix">
+        <!-- Imagen de la Máquina (por defecto) -->
+        <img src="./img/descarga.jpg" class="rounded float-end" alt="Imagen Máquina">
+    </div>
+
+    <!-- Mensaje del Resultado -->
+    <div id="message"></div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="scissors.js"></script>
+</body>
+</html>
