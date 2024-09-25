@@ -99,3 +99,8 @@ const algunos_mayores = ages.some(n => n >= 18);
 console.log(algunos_mayores);
 const algunos_menores = ages.some(n => n < 18);
 console.log(algunos_menores);
+
+const fruits = ['🎂','🍌','🍍','🥭','🥐'];
+const index_pastel = fruits.findIndex(f => f === '🥐');
+console.log(fruits(index_pastel));
+
