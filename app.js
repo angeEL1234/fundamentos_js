@@ -2,7 +2,7 @@
 const ball = document.querySelector("div");
 const massage = document.querySelector("h1");
 
-const eightball = () => {
+const eightball = ()=>  {
   const x = Math.floor(Math.random() * 7);
   switch (x) {
     case 0:
