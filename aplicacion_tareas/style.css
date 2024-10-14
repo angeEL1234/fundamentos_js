@@ -1,0 +1,32 @@
+.form{
+    align-items: center;
+    text-align: center;
+}
+
+
+.alert{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display:  flex;
+    justify-content: space-around;
+}
+
+
+.red{
+    border: 2px solid red;
+    background-color: rgb(240, 165, 165);
+}
+
+
+.yellow{
+    border: 2px solid yellow;
+    background-color: rgb(200, 255, 0);
+}
+
+
+.green{
+    border: 2px solid green;
+    background-color: rgb(0, 255, 13);
+}
+
