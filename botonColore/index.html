@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores RGB</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            margin: 0;
+        }
+
+        .container {
+            border: 2px solid #000; /* Borde del cuadro */
+            padding: 20px; /* Espacio interno */
+            border-radius: 10px; /* Bordes redondeados */
+            background-color: #f0f0f0; /* Fondo del cuadro */
+            text-align: center; /* Centrar el contenido */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle efecto */
+        }
+
+        #output {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button><a href="../inicio/index.html">Regresar</a></button>
+        <h1>CAMBIAR COLOR</h1>
+        <div>
+            <input type="range" id="rangeRed" min="0" max="255" value="0">
+            <div id="outputRed">Rojo</div>
+        </div>
+
+        <div>
+            <input type="range" id="rangeGreen" min="0" max="255" value="0">
+            <div id="outputGreen">Verde</div>
+        </div>
+
+        <div>
+            <input type="range" id="rangeBlue" min="0" max="255" value="0">
+            <div id="outputBlue">Azul</div>
+        </div>
+    </div>
+
+    <script src="../colorsbog/ColoresRGB.js"></script>
+</body>
+</html>

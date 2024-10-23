@@ -1,7 +1,7 @@
 const lienzo = document.querySelector('#lienzo');
 const ctx = lienzo.getContext('2d');
 
-let x = 300;
+let x = 200;
 let y = 200;
 let width = 6;
 let height = 4;

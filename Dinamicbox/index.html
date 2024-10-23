@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+            gap: 10px; /* Espacio entre los elementos */
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(9, 192, 248);
+            transition: all 0.3s ease; /* Transiciones suaves */
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Sombra inicial */
+        }
+    </style>
+    <title>Dinamic Box</title>
+</head>
+<body>
+    <button><a href="../inicio/index.html">Regresar</a></button>
+    <h1>MODIFICACION DE FIGURAS </h1>
+    <div class="container" id="dynamicBox"></div>
+    <div>
+        <label for="Alto">Altura:</label>
+        <input type="range" id="Alto" min="50" max="500" value="100">
+    </div>
+
+    <div>
+        <label for="width">Ancho:</label>
+        <input type="range" id="width" min="50" max="500" value="100">
+    </div>
+
+    <div>
+        <label for="Radio">Radio:</label>
+        <input type="range" id="Radio" min="0" max="250" value="0">
+    </div>
+
+    <div>
+        <label for="Color">Color:</label>
+        <input type="range" id="Color" min="0" max="360" value="180">
+    </div>
+
+    <div>
+        <label for="Shadow">Sombra:</label>
+        <input type="range" id="Shadow" min="0" max="50" value="0">
+    </div>
+
+    <script>
+        const dynamicBox = document.getElementById('dynamicBox');
+        const inputHeight = document.getElementById('Alto');
+        const inputWidth = document.getElementById('width');
+        const inputRadius = document.getElementById('Radio');
+        const inputColor = document.getElementById('Color');
+        const inputShadow = document.getElementById('Shadow');
+
+        inputHeight.addEventListener('input', () => {
+            dynamicBox.style.height = inputHeight.value + 'px';
+        });
+
+        inputWidth.addEventListener('input', () => {
+            dynamicBox.style.width = inputWidth.value + 'px';
+        });
+
+        inputRadius.addEventListener('input', () => {
+            dynamicBox.style.borderRadius = inputRadius.value + 'px';
+        });
+
+        inputColor.addEventListener('input', () => {
+            const hue = inputColor.value;
+            dynamicBox.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+        });
+
+        inputShadow.addEventListener('input', () => {
+            const shadowSize = inputShadow.value;
+            dynamicBox.style.boxShadow = `0px ${shadowSize}px ${shadowSize * 2}px rgba(0, 0, 0, 0.3)`;
+        });
+    </script>
+</body>
+</html>

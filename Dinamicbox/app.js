@@ -1,8 +1,9 @@
-const container = document.querySelector('.container');
-const wControl = document.querySelector('#width');
-const hControl = document.querySelector('#Alto');
-const rControl = document.querySelector('#Radio');
-const kControl = document.querySelector('#Color');
+const dynamicBox = document.getElementById('dynamicBox');
+        const inputHeight = document.getElementById('Alto');
+        const inputWidth = document.getElementById('width');
+        const inputRadius = document.getElementById('Radio');
+        const inputColor = document.getElementById('Color');
+        const inputShadow = document.getElementById('Shadow');
 
 let widthC = 300;
 let altoC = 300;
